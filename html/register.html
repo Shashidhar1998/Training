@@ -1,0 +1,30 @@
+<html>  
+<head>
+<script>
+function validateForm() {
+	 
+ var u = document.forms["myForm"]["userName"].value;
+  var p = document.forms["myForm"]["userPass"].value;
+  var cp = document.forms["myForm"]["cuserPass"].value;
+  if (u == "" || p=="" || cp=="" || p!=cp || u==p ) {
+    alert("details must be filled out");
+    return false;
+    
+  }
+}
+</script>
+</head>
+<body>  
+<form name="myForm" action="register" onsubmit="return validateForm()" method="post">  
+  
+Name:<input type="text" name="userName"/><br/> 
+Password:<input type="password" name="userPass"/><br/> 
+confirm Password:<input type="password" name="cuserPass"/><br/>
+ 
+  
+<br/><br/>  
+<input type="submit" value="Sign up"/>  
+  
+</form>  
+</body>  
+</html>  

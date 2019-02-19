@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script>
+function validateForm() {
+ var u = document.forms["myForm"]["userName"].value;
+  var p = document.forms["myForm"]["userPass"].value;
+  if (u == "" || p=="" || u==p  ) {
+    alert("details must be filled out");
+    return false;
+    
+  }
+}
+</script>
+
+</head>
+<body>
+<form name="myForm" action="servlet1" onsubmit="return validateForm()" method="post">  
+Name:<input type="text" name="userName"/><br/>  
+Password:<input type="password" name="userPass"/><br/>  
+<input type="submit" value="login"/>  
+</form>
+<a href="register.html">click to register</a>
+</body>
+</html>
