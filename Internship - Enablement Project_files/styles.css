@@ -1,0 +1,70 @@
+body {
+    color: #666;
+  }
+  .objectives span {
+    margin-right: 10px;
+    color: teal;
+  }
+  .standards span {
+    margin-right: 10px;
+    color: blue;
+  }
+  ul {
+    list-style: none;
+  }
+  .checks .row {
+    margin-bottom: 20px;
+  }
+  .ui-instructions {
+      padding-left: 15px;
+      color: red;
+  }
+
+table {
+    background-color:bisque; 
+}
+
+table td,th {
+    border: 1px solid rgb(36, 33, 33);
+    width: 90px;
+}
+table.daily {
+    width: 100%;
+}
+table.daily td,th {
+    border: 1px solid rgb(36, 33, 33);
+    text-align: center;
+}
+
+.progress {
+  background-color: #999;
+}
+
+.objweek .obj {
+  padding-left: 3px;
+}
+
+.sub-menu-head {
+  color: blue;
+}
+
+.sub-section {
+  color:blue;
+  font-weight: bold;
+}
+
+.module {
+  margin: 15px 0;
+  padding: 15px 0;
+  background-color: #ddd;
+}
+
+.module h4 {
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.note {
+  color:red;
+}
