@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .button {
   background-color: #4CAF50; /* Green */
@@ -20,29 +21,48 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-.button5 {background-color: #555555;}
+.button5 {background-color: #cccccc;}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 1);
+  max-width: 300px;
+  margin: 22px;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
 </style>
 
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">GrizzyStore</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-      <form class="form-inline" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-success" type="submit">Search</button>
-      </form>
-    </ul>
-  </div>
-</nav>
 
 <nav class="navbar navbar-default" role="navigation">
 
@@ -87,41 +107,86 @@
       </div>
 </nav>
 
+
+
 <div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img src="/Users/shashidharreddy/img_avatar.png" alt="John" style="width:100%">
+        <h1>Shashidhar</h1>
+        <p class="title">CEO & Founder, Chaser</p>
+        <p>Lovely Professional University</p>
+        <div style="margin: 24px 0;">
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+        <p><button>Contact</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4" >
+      <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#add" >Add</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " data-toggle="tab" href="#products" >Products</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#vendors" >Vendors</a>
+    </li>
+  </ul>
+  <br>
+
+
+
+
+
+  <div class="tab-content">
+              <div id="add" class="container tab-pane active"><br>
+                            <table class="table table-hover">
+                                  <thead>
+                                     <tr>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Email</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                       <td>John</td>
+                                       <td>Doe</td>
+                                       <td>john@example.com</td>
+                                    </tr>
+                                  </tbody>
+                           </table>
+              </div>
+             <div id="products" class="container tab-pane fade"><br>
+               <form action="">
+                 <select name="cars" class="" style="width:100px">
+                   <option selected>Custom Select Menu</option>
+                   <option value="volvo">Volvo</option>
+                   <option value="fiat">Fiat</option>
+                   <option value="audi">Audi</option>
+                 </select>
+                 <input type="submit" value="sortby" style="margin:20px">
+               </form>
+                    <h3>Products</h3>
+                    <p>Ut enim ad minim veniam, hgjjk</p>
+             </div>
+             <div id="vendors" class="container tab-pane fade"><br>
+                    <h3>Vendors</h3>
+                    <p>Ut enim ad minim veniam, hgjjk</p>
+             </div>
+    </div>
+
+
+  </div>
+
+
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
