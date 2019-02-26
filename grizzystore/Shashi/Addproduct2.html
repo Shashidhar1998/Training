@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+#search-box,#submit-btn,#logout-btn{
+border-radius:20px;
+margin-top:25px;
+border-style:none;
+padding:5px;
+padding-left:20px;
+padding-right:20px;
+}
+#search-box{
+margin-top:40px;
+width:50%;
+color:#c3c3c3;
+}
+#submit-btn,#logout-btn{
+margin-left:10px;
+color:#f2f2f2;
+background-color:#b3b3b3;
+}
+#logo{
+padding:10px;
+height:80px;
+margin:20px;
+}
+#addimage{
+height:25%;
+width:50%;
+}
+#prof{
+height:200px;
+width:160px;
+}
+#notifaction-btn{
+border-style:none;
+background-color:#f2f2f2;
+width:20px;
+height:20px;
+margin-top:40px;
+}
+#text{
+display:inline;
+font-size:18px;
+margin-left:10px;
+}
+.form-control{
+margin:3px;
+border-top:hidden;
+border-right:hidden;
+border-bottom-style:solid;
+border-left:hidden;
+border-radius:0;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<form action="addpro.jsp" method="post">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-5">
+					<img src="img/add.png" alt="logo"
+						class="img-thumbnail">
+				</div>
+				
+				<div class="col-md-5">
+					<div class="form-group">
+						<input type="text" class="form-control"
+							Placeholder="Product ID" name="Id">
+						<input type="text" class="form-control"
+							Placeholder="Product Name" name="Name">
+						<select class="form-control" id="sell" name="Category">
+							<option value="" Selected Disabled>
+								Category
+							</option>
+							<option value="personalcare">Personal Care</option>
+							<option value="Supplies">Supplies</option>
+							<option value="Devices">Devices</option>																																																																																																																																																									
+						</select>
+						<input type="text" class="form-control"
+							Placeholder="Brand" name="Brand">
+						<input type="text" class="form-control"
+							Placeholder="Description" name="Description">
+						<input type="text" class="form-control"
+							Placeholder="Price" name="Price">
+					</div>
+				</div>
+				<div class="col-md-2">
+						<div class="container-text-center" style="height:10%; position:absolute; bottom:0px;border-radius:20px; color:#b3b3b3;">
+							<button type="reset" id="logout-btn">Cancel</button>
+							<button type="submit"  id="logout-btn">Finish</button>
+						</div>
+				</div>
+			</div>
+		</div>
+</form>
+		</body>
+		</html>
