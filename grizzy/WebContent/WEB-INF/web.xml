@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>  
+ <servlet>  
+    <servlet-name>Login</servlet-name>  
+    <servlet-class>grizzy.Login</servlet-class>  
+  </servlet> 
+   <servlet>  
+    <servlet-name>Logout</servlet-name>  
+    <servlet-class>grizzy.Logout</servlet-class>  
+  </servlet> 
+    <servlet>  
+    <servlet-name>Popout</servlet-name>  
+    <servlet-class>grizzy.Popout</servlet-class>  
+  </servlet> 
+   
+    <servlet-mapping>  
+    <servlet-name>Popout</servlet-name>  
+    <url-pattern>/servlet3</url-pattern>  
+  </servlet-mapping> 
+    <servlet-mapping>  
+    <servlet-name>Logout</servlet-name>  
+    <url-pattern>/servlet2</url-pattern>  
+  </servlet-mapping> 
+    <servlet-mapping>  
+    <servlet-name>Login</servlet-name>  
+    <url-pattern>/servlet1</url-pattern>  
+  </servlet-mapping>  
+   
+  
+</web-app> 
