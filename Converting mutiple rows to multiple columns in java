@@ -1,0 +1,102 @@
+package hospitallistofdoctor;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * @author 765477
+ *
+ */
+public class finallist {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<ScheduledList> schlist = new ArrayList<ScheduledList>();
+		ScheduledList s1 = new ScheduledList("21","a","shashi","today","9-10");
+		ScheduledList s2 = new ScheduledList("21","a","Bharath","today","10-11");
+		ScheduledList s3 = new ScheduledList("21","a","padma","today","11-12");
+		ScheduledList s4 = new ScheduledList("22","b","gopal","today","10-11");
+		ScheduledList s5 = new ScheduledList("22","b","bahu","today","12-1");
+		ScheduledList s6 = new ScheduledList("23","c","viru","today","1-2");
+		ScheduledList s7 = new ScheduledList("23","c","Sahi","today","3-4");
+		ScheduledList s8 = new ScheduledList("23","c","Mahi","today","2-3");
+		
+		
+		schlist.add(s1);
+		schlist.add(s2);
+		schlist.add(s3);
+		schlist.add(s4);
+		schlist.add(s5);
+		schlist.add(s6);
+		schlist.add(s7);
+		schlist.add(s8);
+		
+		
+	//	schlist.forEach((v)-> System.out.println(v.getDocid()+" "+v.getDocname()+" "+v.getPatient()+" "+v.getSlots()) );
+		List<DoctorSchedule> doclist = new ArrayList<DoctorSchedule>();
+	
+		// create an object of doctorlist to store doctorname and slots,patients
+		DoctorSchedule docObj = null;
+		
+		String olddoc = "abc";
+		String newdoc = null;
+		
+		boolean firstTime = true;
+		 
+		for(ScheduledList obj : schlist)
+		{
+			//System.out.println(obj);
+			//System.out.println(obj.getDocid());
+			//System.out.println(obj.getDocname());
+			//System.out.println(obj.getPatient());
+			//System.out.println(obj.getDate());
+			//System.out.println(obj.getSlots());
+			
+			if(!olddoc.equals(obj.getDocname()) )
+			{
+				System.out.println("NotEquals");
+				
+				if(firstTime == false)
+				{					//add to list
+				    
+					doclist.add(docObj);
+				   
+				}
+				firstTime = false; 
+				docObj = new DoctorSchedule(); 
+				
+				// store doctorname and slots with patient in hashmap
+				docObj.setDocname(obj.getDocname());
+				 
+				docObj.docSlot.put(obj.getSlots(),obj.getPatient());
+			}
+			else{
+				
+				docObj.docSlot.put(obj.getSlots(),obj.getPatient());				
+				System.out.println("Equals");
+			  }
+			
+			olddoc=obj.getDocname();
+			
+			
+		}
+		doclist.add(docObj);
+		System.out.println("Doctor Name      Slot");
+		for(DoctorSchedule obj1 : doclist )
+		{
+			System.out.println(obj1.getDocname()+"           "  + obj1.getDocSlot().values());
+			
+			
+			//System.out.println(obj1.getDocSlot().keySet());
+			//System.out.println(obj1.getDocSlot().values());
+		}
+		
+		
+
+	}
+
+}
