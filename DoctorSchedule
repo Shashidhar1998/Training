@@ -1,0 +1,25 @@
+package hospitallistofdoctor;
+
+import java.util.HashMap;
+
+public class DoctorSchedule {
+
+	private String docname;
+	HashMap<String,String> docSlot  = new HashMap<>();
+	
+	public String getDocname() {
+		return docname;
+	}
+	public void setDocname(String docname) {
+		this.docname = docname;
+	}
+	public HashMap<String, String> getDocSlot() {
+		return docSlot;
+	}
+	public void setDocSlot(HashMap<String, String> docSlot) {
+		this.docSlot = docSlot;
+	}
+	
+	 
+	
+}
