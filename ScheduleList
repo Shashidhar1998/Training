@@ -1,0 +1,57 @@
+package hospitallistofdoctor;
+
+public class ScheduledList {
+
+	private String docid,docname,patient,date,slots;
+
+	public String getDocid() {
+		return docid;
+	}
+
+	public void setDocid(String docid) {
+		this.docid = docid;
+	}
+
+	public String getDocname() {
+		return docname;
+	}
+
+	public void setDocname(String docname) {
+		this.docname = docname;
+	}
+
+	public String getPatient() {
+		return patient;
+	}
+
+	public void setPatient(String patient) {
+		this.patient = patient;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getSlots() {
+		return slots;
+	}
+
+	public void setSlots(String slots) {
+		this.slots = slots;
+	}
+
+	public ScheduledList(String docid, String docname, String patient, String date, String slots) {
+		super();
+		this.docid = docid;
+		this.docname = docname;
+		this.patient = patient;
+		this.date = date;
+		this.slots = slots;
+	}
+	
+	
+}
