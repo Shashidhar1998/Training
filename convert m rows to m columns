@@ -1,0 +1,250 @@
+package hospitallistofdoctor;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * @author 765477
+ *
+ */
+public class finallist {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<ScheduledList> schlist = new ArrayList<ScheduledList>();
+		ScheduledList s1 = new ScheduledList("21","a","shashi","today","09-10");
+		ScheduledList s2 = new ScheduledList("21","a","Bharath","today","10-11");
+		ScheduledList s3 = new ScheduledList("21","a","padma","today","11-12");
+		ScheduledList s4 = new ScheduledList("22","b","gopal","today","10-11");
+		ScheduledList s5 = new ScheduledList("22","b","bahu","today","12-01");
+		ScheduledList s6 = new ScheduledList("23","c","viru","today","01-02");
+		ScheduledList s7 = new ScheduledList("23","c","Sahi","today","03-04");
+		ScheduledList s8 = new ScheduledList("23","c","Mahi","today","02-03");
+		
+		
+		schlist.add(s1);
+		schlist.add(s2);
+		schlist.add(s3);
+		schlist.add(s4);
+		schlist.add(s5);
+		schlist.add(s6);
+		schlist.add(s7);
+		schlist.add(s8);
+		
+		
+	//	schlist.forEach((v)-> System.out.println(v.getDocid()+" "+v.getDocname()+" "+v.getPatient()+" "+v.getSlots()) );
+		List<DoctorSchedule> doclist = new ArrayList<DoctorSchedule>();
+	
+		// create an object of doctorlist to store doctorname and slots,patients
+		DoctorSchedule docObj = null;
+		
+		String olddoc = "abc";
+		String newdoc = null;
+		
+		boolean firstTime = true;
+		 
+		for(ScheduledList obj : schlist)
+		{
+			//System.out.println(obj);
+			//System.out.println(obj.getDocid());
+			//System.out.println(obj.getDocname());
+			//System.out.println(obj.getPatient());
+			//System.out.println(obj.getDate());
+			//System.out.println(obj.getSlots());
+			
+			if(!olddoc.equals(obj.getDocname()) )
+			{
+				System.out.println("NotEquals");
+				
+				if(firstTime == false)
+				{					//add to list
+				    
+					doclist.add(docObj);
+				   
+				}
+				firstTime = false; 
+				docObj = new DoctorSchedule(); 
+				
+				// store doctorname and slots with patient in hashmap
+				docObj.setDocname(obj.getDocname());
+				 
+				docObj.docSlot.put(obj.getSlots(),obj.getPatient());
+			}
+			else{
+				
+				docObj.docSlot.put(obj.getSlots(),obj.getPatient());				
+				System.out.println("Equals");
+			  }
+			
+			olddoc=obj.getDocname();
+			
+			
+		}
+		doclist.add(docObj);
+		System.out.println("Doctor Name      Slot");
+		List<DoctorSchedule> doclist1 = new ArrayList<DoctorSchedule>();
+		for(DoctorSchedule obj1 : doclist )
+		{
+			System.out.println(obj1.getDocname()+"           "  + obj1.getDocSlot().values());
+			DoctorSchedule docObj1 = docObj = new DoctorSchedule();
+			docObj1.setDocname(obj1.getDocname());
+			
+			if(obj1.getDocSlot().containsKey("09-10"))
+			{
+				System.out.println("Value 09-10 : " + obj1.getDocSlot().get("09-10"));
+				docObj1.docSlot.put("1",obj1.getDocSlot().get("09-10"));
+			}
+			else
+			{
+				System.out.println("Value 09-10 : free");
+				docObj1.docSlot.put("1","Available");
+			}
+			
+			if(obj1.getDocSlot().containsKey("10-11"))
+			{
+				System.out.println("Value 10-11 : " + obj1.getDocSlot().get("10-11"));
+				docObj1.docSlot.put("2",obj1.getDocSlot().get("10-11"));
+			}
+			else
+			{
+				System.out.println("Value 10-11 : free");
+				docObj1.docSlot.put("2","Available");
+			}
+			
+			if(obj1.getDocSlot().containsKey("11-12"))
+			{
+				System.out.println("Value 11-12 : " + obj1.getDocSlot().get("11-12"));
+				docObj1.docSlot.put("3",obj1.getDocSlot().get("11-12"));
+			}
+			else
+			{
+				System.out.println("Value 11-12 : free");
+				docObj1.docSlot.put("3","Available");
+			}
+			
+			if(obj1.getDocSlot().containsKey("12-01"))
+			{
+				System.out.println("Value 12-01 : " + obj1.getDocSlot().get("12-01"));
+				docObj1.docSlot.put("4",obj1.getDocSlot().get("12-01"));
+			}
+			else
+			{
+				System.out.println("Value 12-01 : free");
+				docObj1.docSlot.put("4","Available");
+			}
+		
+			if(obj1.getDocSlot().containsKey("01-02"))
+			{
+				System.out.println("Value 01-02 : " + obj1.getDocSlot().get("01-02"));
+				docObj1.docSlot.put("5",obj1.getDocSlot().get("01-02"));
+			}
+			else
+			{
+				System.out.println("Value 01-02 : free");
+				docObj1.docSlot.put("5","Available");
+			}
+			
+			if(obj1.getDocSlot().containsKey("02-03"))
+			{
+				System.out.println("Value 02-03 : " + obj1.getDocSlot().get("02-03"));
+				docObj1.docSlot.put("6",obj1.getDocSlot().get("02-03"));
+			}
+			else
+			{
+				System.out.println("Value 02-03 : free");
+				docObj1.docSlot.put("6","Available");
+			}
+			
+			if(obj1.getDocSlot().containsKey("03-04"))
+			{
+				System.out.println("Value 03-04 : " + obj1.getDocSlot().get("03-04"));
+				docObj1.docSlot.put("7",obj1.getDocSlot().get("03-04"));
+			}
+			else
+			{
+				System.out.println("Value 03-04 : free");
+				docObj1.docSlot.put("7","Available");
+			}
+			
+			if(obj1.getDocSlot().containsKey("04-05"))
+			{
+				System.out.println("Value 04-05 : " + obj1.getDocSlot().get("04-05"));
+				docObj1.docSlot.put("8",obj1.getDocSlot().get("04-05"));
+			}
+			else
+			{
+				System.out.println("Value 04-05 : free");
+				docObj1.docSlot.put("8","Available");
+			}
+			
+			doclist1.add(docObj1);
+			docObj1=null;
+			/*
+			obj1.getDocSlot().forEach((k,v)-> {
+	             
+	             if( k.equals("09-10"))
+	             {
+	            	 
+	                System.out.println("Value 09-10 :"+ v);
+	              }
+	             if( k.equals("10-11"))
+	             {
+	                System.out.println("Value 10-11:"+ v);
+	              }
+	             if( k.equals("11-12"))
+	             {
+	                System.out.println("Value 11-12:"+ v);
+	              }
+	             if( k.equals("12-01"))
+	             {
+	                System.out.println("Value 12-01:"+ v);
+	              }
+	             if( k.equals("01-02"))
+	             {
+	                System.out.println("Value 01-02:"+ v);
+	              }
+	             if( k.equals("02-03"))
+	             {
+	                System.out.println("Value 02-03:"+ v);
+	              }
+	             if( k.equals("03-04"))
+	             {
+	                System.out.println("Value 03-04:"+ v);
+	              }
+	             if( k.equals("04-05"))
+	             {
+	                System.out.println("Value 04-05:"+ v);
+	              }
+	             if( k.equals("05-06"))
+	             {
+	                System.out.println("Value 05-06:"+ v);
+	              }
+	             
+	        
+	         });
+			
+			
+			*/
+				
+			
+			
+			//System.out.println(obj1.getDocSlot().keySet());
+			//System.out.println(obj1.getDocSlot().values());
+			
+			
+			}
+		for(DoctorSchedule obj2 : doclist1 )
+		{
+			System.out.println(obj2.getDocname()+"           "  + obj2.getDocSlot().values());
+		}
+
+		}
+		
+		
+
+	}
+
