@@ -1,0 +1,8 @@
+select doc,date,count(slot) from new_table where date = 1  group by doc 
+           union  select doc,date,count(slot) from new_table where date = 2  group by doc
+				  union  select doc,date,count(slot) from new_table where date = 3  group by doc
+						 union  select doc,date,count(slot) from new_table where date = 4 group by doc
+                                union  select doc,date,count(slot) from new_table where date = 5  group by doc
+                                       union  select doc,date,count(slot) from new_table where date = 6  group by doc
+                                              union  select doc,date,count(slot) from new_table where date = 7  group by doc
+                                                      order by doc,date;
