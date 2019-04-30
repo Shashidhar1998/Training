@@ -192,16 +192,10 @@ Pojo
 
 
 
-
-
-
-
-
-
-
-
-
-
+ApointmentService --> addhospitalmodel, adddoc, patientBookingDetails
+AuthService --> addhospitalmodel, patientBookingDetails, feedback
+HospitalService --> patientBookingDetails, weeklySchedule, adddoc, 
+ 
 
 
 
