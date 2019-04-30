@@ -1,0 +1,179 @@
+AppointmentController
+
+bookAppointment()
+report()
+
+HospitalAdminController
+
+addDoctor()
+todaySchedule()
+weeklySchedule()
+displaypatient()
+feedbacks()
+UpdateDetails()
+
+
+LoginController
+
+validateUser()
+logout()
+changePassword()
+
+
+Register Controller
+
+notifications()
+displayFeedbacks()
+markAsRead()
+hospitalsList()
+addHospital()
+acceptHospital
+
+
+MyRESTController
+
+getMySlot()
+getDoctorDetails()
+
+
+
+
+
+Servicess
+
+
+
+AppointmentService
+
+getHospitalName(String)
+searchdoctors(String, String)
+saveAppointment(HttpSession, String, String, String)
+getUserDetails(String)
+getDoctorDetails(String, String)
+gethospitaldetails(String)
+
+AuthService
+
+findUsertype(String, String)
+findHospitalUserInMapTable(String)
+listhospitalsbyUniqueId(String)
+getreadfeedbacks()
+changePass(String, String)
+findUsername(String, String)
+
+Hospital Service
+
+
+addDoctortodb(adddoc)
+displayPatientsForIndividualDoctor(String)
+addFeedbackToDatabase(feedback)
+displayWeeklyScheduleForIndividualDoctor(String, String)
+weeklyScheduleToOrder(List<weeklySchedule>)
+addDetailsToDatabase(String, String, int)
+
+
+RegistrationService
+
+registerUser(loginmodel)
+registerhospital(loginmodel, addhospitalmodel, userhospitalmodel)
+accepthos(int, String)
+ignorehos(int, String)
+updateReadStatusAsRead(int)
+addUser(User, loginmodel)
+
+
+Pojo
+++++
+1. adddoc
+	private int id;
+	private String hospitalid;
+	private String doctorid;
+	private String doctorname;
+	private String gender;
+	private String age;
+	private String qualification;
+	private String speciality;
+	private String email;
+	private String mobileno;
+
+
+
+2. addhospitalmodel
+	private int id,status;
+	private String uniqueid;
+	private String name,address1,address2,state,city,pin,certifications,success,achievements,optional;
+
+
+3. feedback
+	
+	private String  name;
+	private String  email;
+	private String  subject;
+	private String  message;
+	private String  dateandtime;
+	private String  readstatus;
+
+
+4. loginmodel
+	private int id;
+	
+	private String UserID;
+	
+
+	private String Password;
+	
+
+	private String Email;
+	
+
+	private String ContactNumber;
+	
+	private String type; 
+
+
+5. patientBookingDetails
+	private int id;
+	private String hospital_id;
+	private String UserID;
+	private String patientname;
+	private String doctorid;
+	private String doctor_name;
+	private String disease;
+	
+	private String prescriptionprovided;
+	private String status;
+	private String date;
+	private String slots;
+	private String speciality;
+
+
+6. User
+    private int id ;
+	
+	private String first_name;
+	private String last_name;
+	private String gender;
+	private String age;
+	private String username;
+	private String email;
+	private String phone;
+	private String password;
+	private String address;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+listhospitals()
+
+
