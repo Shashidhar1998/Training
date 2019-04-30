@@ -1,0 +1,99 @@
+AppointmentController
+
+bookAppointment()
+report()
+
+HospitalAdminController
+
+addDoctor()
+todaySchedule()
+weeklySchedule()
+displaypatient()
+feedbacks()
+UpdateDetails()
+
+
+LoginController
+
+validateUser()
+logout()
+changePassword()
+
+
+Register Controller
+
+notifications()
+displayFeedbacks()
+markAsRead()
+hospitalsList()
+addHospital()
+acceptHospital
+
+
+MyRESTController
+
+getMySlot()
+getDoctorDetails()
+
+
+
+
+
+Servicess
+
+
+
+AppointmentService
+
+getHospitalName(String)
+searchdoctors(String, String)
+saveAppointment(HttpSession, String, String, String)
+getUserDetails(String)
+getDoctorDetails(String, String)
+gethospitaldetails(String)
+
+AuthService
+
+findUsertype(String, String)
+findHospitalUserInMapTable(String)
+listhospitalsbyUniqueId(String)
+getreadfeedbacks()
+changePass(String, String)
+findUsername(String, String)
+
+Hospital Service
+
+
+addDoctortodb(adddoc)
+displayPatientsForIndividualDoctor(String)
+addFeedbackToDatabase(feedback)
+displayWeeklyScheduleForIndividualDoctor(String, String)
+weeklyScheduleToOrder(List<weeklySchedule>)
+addDetailsToDatabase(String, String, int)
+
+
+RegistrationService
+
+registerUser(loginmodel)
+registerhospital(loginmodel, addhospitalmodel, userhospitalmodel)
+accepthos(int, String)
+ignorehos(int, String)
+updateReadStatusAsRead(int)
+addUser(User, loginmodel)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+listhospitals()
+
+
